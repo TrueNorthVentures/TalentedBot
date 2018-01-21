@@ -1,0 +1,28 @@
+//replymesge = correctSequence(str.intent, replymesge, 3);
+                                                //var attachment = new
+                                                //{
+                                                //    type = "template",
+                                                //    payload = new
+                                                //    {
+                                                //        template_type = "button",
+                                                //        text = "Your ?? is on it's way!",
+                                                //        buttons = new[]
+                                                //           {
+                                                //              new
+                                                //              {
+                                                //                type = "web_url",
+                                                //                url = "https://www.google.com",
+                                                //                title = "See on map",
+                                                //                webview_height_ratio = "compact",
+                                                //                messenger_extensions = true
+                                                //               }
+                                                //            }
+                                                //    }
+                                                //};
+
+                                                //reply.ChannelData = JObject.FromObject(new
+                                                //{
+                                                //    attachment
+                                                //});
+
+                                                //await connector.Conversations.ReplyToActivityAsync(reply);

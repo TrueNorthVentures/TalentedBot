@@ -1,0 +1,1843 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "truenorthluis",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "currentAddress"
+    },
+    {
+      "name": "degree"
+    },
+    {
+      "name": "description"
+    },
+    {
+      "name": "emailAddress"
+    },
+    {
+      "name": "firstName"
+    },
+    {
+      "name": "Gender"
+    },
+    {
+      "name": "graduate"
+    },
+    {
+      "name": "lastName"
+    },
+    {
+      "name": "myAge"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "projects"
+    },
+    {
+      "name": "questions"
+    },
+    {
+      "name": "title"
+    },
+    {
+      "name": "university"
+    }
+  ],
+  "entities": [
+    {
+      "name": "about_project"
+    },
+    {
+      "name": "userAge"
+    },
+    {
+      "name": "userInfo"
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [
+    "email"
+  ],
+  "model_features": [],
+  "regex_features": [
+    {
+      "name": "userInfo",
+      "pattern": "[a-z]{2-22}",
+      "activated": true
+    }
+  ],
+  "utterances": [
+    {
+      "text": "aaa",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "0",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how tall are you?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "get started",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 4,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "do you have any pets?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "update profile",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "update my profile",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "i study computer science",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "computer science",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "usama",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i want to update my profile",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 10,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "my age is 23",
+      "intent": "myAge",
+      "entities": [
+        {
+          "entity": "userAge",
+          "startPos": 10,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "my gender is female",
+      "intent": "Gender",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 13,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "my email address is saami92@gmail.com",
+      "intent": "emailAddress",
+      "entities": []
+    },
+    {
+      "text": "what sort of position are you looking for ?",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 13,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "that's an interesting career choice. before we use our magic sauce to match you let's get your profile setup.",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 95,
+          "endPos": 101
+        }
+      ]
+    },
+    {
+      "text": "this is the information we were able to pull from facebook could you confirm if you would like me to use this information ?",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 69,
+          "endPos": 75
+        }
+      ]
+    },
+    {
+      "text": "let's get to fixing your details. what's your first name ?",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 25,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "my gender is male",
+      "intent": "Gender",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 13,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "i attend comsats university",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "what sort of company are you interested in working for ?",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 13,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "i attend comsats",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "than save the user's basic information ?\"",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 21,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "what university did you attend ?",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 24,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "ok you are interested in financial technology",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 11,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "ok you are designer of ux / ui",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 11,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "project that i have been done so far are 4",
+      "intent": "projects",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 41,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "the title of my project is solar solution",
+      "intent": "title",
+      "entities": []
+    },
+    {
+      "text": "the description of my project is to manage office work",
+      "intent": "description",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 33,
+          "endPos": 53
+        }
+      ]
+    },
+    {
+      "text": "ok you want to update your basic details",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 33,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "your are still in test mode",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 23,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "it automates office work for ngb solar",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "gender female",
+      "intent": "Gender",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 7,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "gender male",
+      "intent": "Gender",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 7,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "you want to give another language test",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "ok thanks for visiting our bot",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 3,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "you selected the test android",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 17,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "my gender female",
+      "intent": "Gender",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 10,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "gender is male",
+      "intent": "Gender",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 10,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "gender is female",
+      "intent": "Gender",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 10,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "i gender female",
+      "intent": "Gender",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "i gender male",
+      "intent": "Gender",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "my gender male",
+      "intent": "Gender",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 10,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "i study software engineering",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "i studied software engineering",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 10,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "email address is saima@smbi.ca",
+      "intent": "emailAddress",
+      "entities": []
+    },
+    {
+      "text": "email is littlebirdy94@gmail.com",
+      "intent": "emailAddress",
+      "entities": []
+    },
+    {
+      "text": "email saima@smbi.ca",
+      "intent": "emailAddress",
+      "entities": []
+    },
+    {
+      "text": "i attend pakistan institute of engineering and applied sciences",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 62
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa is at last of my name",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "the last name is aaaaaaa",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa the last name",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa last name",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa is the last",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa is the last name",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa is last name",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "my last name is aaaaaaa",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 16,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa is my last name",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "last is aaaaaaa",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "last name is aaaaaaa",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 13,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa is my first name",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa is first name",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa is first",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa first",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa is the first",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa first name",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa the first name",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "the first name is aaaaaaa",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 18,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa is at first of my name",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "the first name aaaaaaa",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 15,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "first name aaaaaaa",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 11,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "my first name is aaaaaaa",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "last aaaaaaa",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 5,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa last",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "first aaaaaaa",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 6,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "the last name aaaaaaa",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 14,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa is last",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "last name aaaaaaa",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 10,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "first name is aaaaaaa",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 14,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "first is aaaaaaa",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "aaaaaaa is the first name",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "i attend aaaaaaaa-aaaaaaaaa-aaaaaaaaa",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "i attend aaaaaaa",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "i attend aaaaaaa-aaaaaaa-aaaaaaa university of science and technology",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 68
+        }
+      ]
+    },
+    {
+      "text": "i attend aaaaaaa-aaaaaaa-aaaaaaa university",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 42
+        }
+      ]
+    },
+    {
+      "text": "i attend aaaaaaa university",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "i attend aaaaaaa aaaaaaa aaaaaaa institute",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "i attend aaaa khan aaaaaa",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "i attend ghulam ishaq khan institute",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "i attend uog",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "i attend benazir bhutto shaheed university lyari",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 47
+        }
+      ]
+    },
+    {
+      "text": "i attend university of science and technology, bannu",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 51
+        }
+      ]
+    },
+    {
+      "text": "i attend government college for women university, sialkot",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 56
+        }
+      ]
+    },
+    {
+      "text": "i attend adams state university",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "i study secondary education- alternative route to licensure (arl) (licensure)",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 76
+        }
+      ]
+    },
+    {
+      "text": "i study administrative supervisory licensure (licensure)",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 55
+        }
+      ]
+    },
+    {
+      "text": "i study agricultural communication and journalism (bs)",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 53
+        }
+      ]
+    },
+    {
+      "text": "i study aerospace studies (air force rotc)",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "i study accounting (bs, ba)",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "i study mathematics/statistics education (composite) (bs, ba)",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 60
+        }
+      ]
+    },
+    {
+      "text": "i study secondary education (2nd bs, 2nd ba)",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 43
+        }
+      ]
+    },
+    {
+      "text": "i study classics with emphasis in greek language",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 47
+        }
+      ]
+    },
+    {
+      "text": "i study (aaaaaa)\\(aaaaaaa)-(aaaaaaa)",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "i study aaaaaaa(aaaaaaa)",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "i study aaaaaaa-aaaaaaa",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "i study aaaaaaa",
+      "intent": "degree",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 8,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "the description of my project is aaaaa aaaaaaa aaaaa (aaaaa ) \\aaaadfadsg \\()= -* & ^ % $ # @ ! adsgadsgaga + - .... < > \";:\"'[]{}|~`",
+      "intent": "description",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 33,
+          "endPos": 132
+        }
+      ]
+    },
+    {
+      "text": "your stored data has been displayed",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 12,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "the description of my project is formally written declaration of the project and its idea and context to explain the goals and objectives to be reached, the business need and problem to be addressed, potentials pitfalls and challenges, approaches and execution methods, resource estimates, people and organizations involved, and other relevant information that explains the need for project startup and aims to describe the amount of work planned for implementation.",
+      "intent": "description",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 33,
+          "endPos": 465
+        }
+      ]
+    },
+    {
+      "text": "the description of my project is i need to note that some people are confused with the terms “project description” and “project background“. they might regard both terms as equivalent. but the terms are not same and they have different meaning. earlier, in one of our publications we briefly talked about the project background and how it differs from the project description. please read more here. i also recommend the service at www.domyassignment.com specializing in delivering plagiarism-free ‘d",
+      "intent": "description",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 33,
+          "endPos": 499
+        }
+      ]
+    },
+    {
+      "text": "the description of my project is project title: bouncy bunny counts money project justification: our company has a hole in the market when it comes to children's items. bouncy bunny counts money will fulfill this hole and further boost our accounting software market to parents of the children using this game. project scope: this project will consist of creating a marketable game based upon the bouncy bunny counts money comics on our website. the project will be completed by december, 2010. mod",
+      "intent": "description",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 33,
+          "endPos": 497
+        }
+      ]
+    },
+    {
+      "text": "the description of my project is the description of my project is [while the scope statement above contains smart goals , it ] is [still lacking as a proper scope statement . first , there will be way more deliverables ] than are [listed . when ] determining what [deliverables will be produced , it may be helpful to first decompose your project and then formulate a work breakdown structure . this way , all milestones and deliverables will have been defined for your project . second , the team me",
+      "intent": "description",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 33,
+          "endPos": 499
+        }
+      ]
+    },
+    {
+      "text": "the description of my project is when writing a project description for external funding always think of your audience. it is essential to use plain english, define your key terms and cite key international and easily accessible references wherever possible. succinctness and clarity is key. all funding agencies have a page limit with 6-8 pages being common. a quality application is readable, feasible and interesting. the following structure may not necessarily suit all submissions. always read",
+      "intent": "description",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 33,
+          "endPos": 497
+        }
+      ]
+    },
+    {
+      "text": "the descrption of my project is project description template - uit https://uit.no/content/335743/project%20description%20template%20-%20bfe.docx below is an example of how to organize the project description and which topics to include. by using this template you ensure that all required elements are ... examples of project scopes: what should be included in a scope ... www.brighthubpm.com › project planning oct 24, 2014 - we'll take a look at actual examples of project scope statements, then ..",
+      "intent": "description",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 32,
+          "endPos": 499
+        }
+      ]
+    },
+    {
+      "text": "the description of my project is the description of my project is [about 250 ] , [000 ] , [000 results ( 0 . 51 seconds ) search results project description & samples | fema . gov https : / / www . fema . gov / project - description - samples apr 21 , 2015 - this page provides information for preparing project descriptions for environmental reviews . project . . . see sample project descriptions below . how to write a project description : key criteria and steps www . mymanagementguide . com › h",
+      "intent": "description",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 33,
+          "endPos": 499
+        }
+      ]
+    },
+    {
+      "text": "the description of my project is //method 1 (i like this) file.appendalllines( \"fileappendalllines.txt\", new string[] { \"line1\", \"line2\", \"line3\" }); //method 2 file.appendalltext( \"fileappendalltext.txt\", \"line1\" + environment.newline + \"line2\" + environment.newline + \"line3\" + environment.newline); //method 3 using (streamwriter stream = file.appendtext(\"fileappendtext.txt\")) { stream.writeline(\"line1\"); stream.writeline(\"line2\"); stream.writeline(\"line3\"",
+      "intent": "description",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 33,
+          "endPos": 460
+        }
+      ]
+    },
+    {
+      "text": "the title of my project is aaaaa",
+      "intent": "title",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 27,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "the title of my project is aaaaaaa aaaaaa ( aaaaaaaa )",
+      "intent": "title",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 27,
+          "endPos": 53
+        }
+      ]
+    },
+    {
+      "text": "the title of my project is aaaa-aaaaa ( aaaaaa )",
+      "intent": "title",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 27,
+          "endPos": 47
+        }
+      ]
+    },
+    {
+      "text": "my first name is zzzzzz",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 17,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "my first name is a",
+      "intent": "firstName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 17,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "my last name is a",
+      "intent": "lastName",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 16,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "my age is 00",
+      "intent": "myAge",
+      "entities": [
+        {
+          "entity": "userAge",
+          "startPos": 10,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "i graduated in 0000",
+      "intent": "graduate",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 15,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "what college did you attend?",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 21,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "ok you are interested in female focused technology",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 11,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "ok you are interested in aaa",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 11,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "ok you are interested in aaa/aaa-aaa",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 11,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "attend international islamic university , islamabad",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 7,
+          "endPos": 50
+        }
+      ]
+    },
+    {
+      "text": "i attend comsats institute of information technology",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 51
+        }
+      ]
+    },
+    {
+      "text": "comsats institute of information technology",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what is your firstname?",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 13,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "than save the user's basic information ?",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 21,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "i currently live in aaa aaa",
+      "intent": "currentAddress",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 20,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "i currently live in aaa",
+      "intent": "currentAddress",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 20,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "i currently live in aaa aaa aaa aaa",
+      "intent": "currentAddress",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 20,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "i currently live in aaa (aaa)",
+      "intent": "currentAddress",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 20,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "i attend aaa",
+      "intent": "university",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 9,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "i currently live in aaa-aaa/aaa aaa , aaa",
+      "intent": "currentAddress",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 20,
+          "endPos": 40
+        }
+      ]
+    },
+    {
+      "text": "i currently live in a",
+      "intent": "currentAddress",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 20,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "i currently live in aaaaaaaa",
+      "intent": "currentAddress",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 20,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "aaa-aaaa/aaa aaa",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "aaaa aaa aaa",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "project that i have been done so far are 0",
+      "intent": "projects",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 41,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "if you were a super hero what powers would you have?",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 12,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "if you were prime miniser/ruler of the world what laws would you make?",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 18,
+          "endPos": 53
+        }
+      ]
+    },
+    {
+      "text": "how many pairs of shoes do you own?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what shoe size are you?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "whats your lucky number?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "whats your favourite colour?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what starsign does that make it?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "adsgasd/asd adf a-adsfa adf asd",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "ada dgadsg asdg asdga sd asdgas dgasd g",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "aadsgg agasd ( adsf ) / asdj asdl asdfm ad_+)(*&^%$#@!~\\\\][{p{.",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 0,
+          "endPos": 62
+        }
+      ]
+    },
+    {
+      "text": "aaa aaa aaa",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "ok you want to complete module1",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 24,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "you selected the test aaa",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 17,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "you selected the test aaa aaaa - ( aaaa )",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 17,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "you selected the test f",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 17,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "you selected the test aaaaaaa",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 17,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "my age is 0",
+      "intent": "myAge",
+      "entities": [
+        {
+          "entity": "userAge",
+          "startPos": 10,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "age is 0",
+      "intent": "myAge",
+      "entities": [
+        {
+          "entity": "userAge",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "you selected the test a . a",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 17,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "your stored score has been displayed",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 12,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "ok you are interested in aaaaaa",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 11,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "b your are still in test mode0",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 25,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "ok you are developer of aaa",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 11,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "we will edit your aaa",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 18,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "ok you want to update your profile",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 15,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "ok you want to update your informationeduca",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 27,
+          "endPos": 42
+        }
+      ]
+    },
+    {
+      "text": "ok you want to update your informationbasic",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 27,
+          "endPos": 42
+        }
+      ]
+    },
+    {
+      "text": "we will edit your informationbasic",
+      "intent": "questions",
+      "entities": [
+        {
+          "entity": "userInfo",
+          "startPos": 18,
+          "endPos": 33
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+
+Server: smbibotapp20170804124326.scm.azurewebsites.net:443
+
+Site name:SmbiBotApp20170804124326
+
+User name:$SmbiBotApp20170804124326
+
+Password:peqSkFe1dNNAXrjw3BohN1saqBufgv15KhJxQcvabmBbt141uFGu2dL0pjHj
+
+Destination URL:http://smbibotapp20170804124326.azurewebsites.net
+
+messaging endpoint:https://smbibotapp20170804124326.azurewebsites.net/api/messages
+
+ngrok command: .\ngrok.exe http 3975 -host-header="localhost:3975"

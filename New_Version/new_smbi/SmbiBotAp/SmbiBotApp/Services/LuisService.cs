@@ -21,13 +21,16 @@ namespace SmbiBotApp.Services
             string escapedString = Uri.EscapeDataString(phrase);
             using (var client = new HttpClient())
             {
-                //   string uri = $"https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/45ea4b09-2acf-46fc-a23e-62c59ce38901?subscription-key=9898c808f2b74e0d8267ae2c39d818d3&verbose=true&q={escapedString}";
+                // string uri = $"https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/45ea4b09-2acf-46fc-a23e-62c59ce38901?subscription-key=9898c808f2b74e0d8267ae2c39d818d3&verbose=true&q={escapedString}";
                 //usama   string uri = $"https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/45ea4b09-2acf-46fc-a23e-62c59ce38901?subscription-key=9898c808f2b74e0d8267ae2c39d818d3&timezoneOffset=0.0&verbose=true&q={escapedString}"; // usama
                 //    string uri = $"https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/e1497dd1-64dc-4fac-8e78-ec01ab990ca0?subscription-key=9d70f83f88cf4293ab0656178c22c692&timezoneOffset=0&verbose=true&q={escapedString}";   // waseem
                 //string uri = $"https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/3d52c5ee-e4a3-4f05-a77e-52f87a347c06?subscription-key=ebf2a6c25c8543b28d4e0ad853beda42&verbose=true&timezoneOffset=0&q={escapedString}";//rizwan
                 // string uri = $"https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/ca353423-ce52-4f24-b7e0-f95be58bb897?subscription-key=cc1c1be1e6a84766b63e9a580b65577f&verbose=true&timezoneOffset=0&q={escapedString}";///anwar
-               // string uri = $"https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/02aa0a1c-9e20-44a8-a573-531cf5293257?subscription-key=f206159d1acb402f8fff6d2884eeee0d&verbose=true&timezoneOffset=0&q={escapedString}";//iqra
-                string uri = $"https://southeastasia.api.cognitive.microsoft.com/luis/v2.0/apps/a3b237a6-fd65-4c8d-a9ea-4d0b972412c7?subscription-key=b44678ff702244668e8f410e7d1d9dd6&timezoneOffset=0&verbose=true&q={escapedString}";
+                // string uri = $"https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/02aa0a1c-9e20-44a8-a573-531cf5293257?subscription-key=f206159d1acb402f8fff6d2884eeee0d&verbose=true&timezoneOffset=0&q={escapedString}";//iqra
+                // string uri = $"https://southeastasia.api.cognitive.microsoft.com/luis/v2.0/apps/a3b237a6-fd65-4c8d-a9ea-4d0b972412c7?subscription-key=b44678ff702244668e8f410e7d1d9dd6&timezoneOffset=0&verbose=true&q={escapedString}";
+                string uri = $"https://southeastasia.api.cognitive.microsoft.com/luis/v2.0/apps/fe54595a-ec04-4d59-906b-5d516927a8f5?subscription-key=b44678ff702244668e8f410e7d1d9dd6&verbose=true&timezoneOffset=0&q={escapedString}";//modifiedversion	// asia region
+                                                                                                                                                                                                                                       //string uri = $"https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/fe54595a-ec04-4d59-906b-5d516927a8f5?subscription-key=ebf2a6c25c8543b28d4e0ad853beda42&verbose=true&timezoneOffset=0&q={escapedString}";// mdifiedversion // north america region
+
                 var msg = await client.GetAsync(uri);
                 if (msg.IsSuccessStatusCode)
                 {

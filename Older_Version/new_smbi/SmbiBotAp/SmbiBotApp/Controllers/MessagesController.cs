@@ -76,8 +76,8 @@ namespace SmbiBotApp
         HttpClient client = new HttpClient();//1
         public static string userid = null;//2
         public static string acctoken = null;//4
-        public static readonly Uri FacebookOauthCallback = new Uri("http://smbibotapp20170804124326.azurewebsites.net/api/OAuthCallback");//3//5
-        //public static readonly Uri FacebookOauthCallback = new Uri("http://localhost:3975/api/OAuthCallback");//3//5
+       // public static readonly Uri FacebookOauthCallback = new Uri("http://smbibotapp20170804124326.azurewebsites.net/api/OAuthCallback");//3//5
+        public static readonly Uri FacebookOauthCallback = new Uri("http://localhost:3975/api/OAuthCallback");//3//5
         public List<string> col = new List<string>();
         public static List<string> data = new List<string>();
         public static List<string> avoid = new List<string>();
@@ -521,7 +521,6 @@ namespace SmbiBotApp
                                                     {
                                                         Title = "Login",
                                                         Type = "openUrl",
-
                                                         Value = fbLoginUrl,
 
                                                     };
