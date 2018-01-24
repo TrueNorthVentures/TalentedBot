@@ -956,6 +956,8 @@ namespace SmbiBotApp
                                             case 4:
                                                 check_entity(symb, luisresp);
                                                 // replymesge = correctSequence(str.intent, replymesge, 8);
+                                                count = 5;
+                                                counter = 5;
                                                 RedirectController.cont = reply;            
                                                 personality_view(reply);
                                                 break;
@@ -1890,38 +1892,96 @@ namespace SmbiBotApp
 
         private void select_design(Activity reply)
         {
-            reply.Attachments = new List<Attachment>();
-            List<CardAction> cardButtons = new List<CardAction>();
-            CardAction Button1 = new CardAction()
-            {
-                Value = "ok you are interested in ux/ui",
-                Type = "postBack",
-                Title = "UX / UI Designer"
-            };
-            CardAction Button2 = new CardAction()
-            {
-                Value = "ok you are interested in graphic",
-                Type = "postBack",
-                Title = "Graphic Designer",
-            };
+                reply.Attachments = new List<Attachment>();
+                List<CardAction> cardButtons1 = new List<CardAction>();
+                List<CardAction> cardButtons2 = new List<CardAction>();
+                List<CardImage> cardImages1 = new List<CardImage>();
+                List<CardImage> cardImages2 = new List<CardImage>();
+               
+                CardImage image1 = new CardImage()
+                {
+                    Url = "http://smbibotapp20170804124326.azurewebsites.net/Images/ux-ui.png"
+                };
+                CardImage image2 = new CardImage()
+                {
+                    Url = "http://smbibotapp20170804124326.azurewebsites.net/Images/graphic-design.png"
 
-            cardButtons.Add(Button1);
-            cardButtons.Add(Button2);
+                };
+                
+                CardAction Button1 = new CardAction()
+                {
+                    Value = "ok you are interested in ux/ui",
+                    Type = "postBack",
+                    Title = "UX / UI Designer"
+                };
+                CardAction Button2 = new CardAction()
+                {
+                    Value = "ok you are interested in graphic",
+                    Type = "postBack",
+                    Title = "Graphic Designer",
+                };
 
-            HeroCard jobCard = new HeroCard()
-            {
-                Buttons = cardButtons,
-            };
+                cardButtons1.Add(Button1);
+                cardButtons2.Add(Button2);
+                cardImages1.Add(image1);
+                cardImages2.Add(image2);
+                
+                HeroCard jobCard1 = new HeroCard()
+                {
+                    Buttons = cardButtons1,
+                    Images = cardImages1,
 
-            Attachment jobAttachment = jobCard.ToAttachment();
-            reply.Attachments.Add(jobAttachment);
-            reply.AttachmentLayout = AttachmentLayoutTypes.Carousel;
+                };
+                HeroCard jobCard2 = new HeroCard()
+                {
+                    Buttons = cardButtons2,
+                    Images = cardImages2
+                };
+
+                Attachment jobAttachment1 = jobCard1.ToAttachment();
+                Attachment jobAttachment2 = jobCard2.ToAttachment();
+                reply.Attachments.Add(jobAttachment1);
+                reply.Attachments.Add(jobAttachment2);
+                reply.AttachmentLayout = AttachmentLayoutTypes.Carousel;
+                                                 
         }
 
         private void select_development(Activity reply)
         {
+
             reply.Attachments = new List<Attachment>();
-            List<CardAction> cardButtons = new List<CardAction>();
+            List<CardAction> cardButtons1 = new List<CardAction>();
+            List<CardAction> cardButtons2 = new List<CardAction>();
+            List<CardAction> cardButtons3 = new List<CardAction>();
+            List<CardAction> cardButtons4 = new List<CardAction>();
+            List<CardAction> cardButtons5 = new List<CardAction>();
+            List<CardImage> cardImages1 = new List<CardImage>();
+            List<CardImage> cardImages2 = new List<CardImage>();
+            List<CardImage> cardImages3 = new List<CardImage>();
+            List<CardImage> cardImages4 = new List<CardImage>();
+            List<CardImage> cardImages5 = new List<CardImage>();
+
+            CardImage image1 = new CardImage()
+            {
+                Url = "http://smbibotapp20170804124326.azurewebsites.net/Images/full-stack.png"
+            };
+            CardImage image2 = new CardImage()
+            {
+                Url = "http://smbibotapp20170804124326.azurewebsites.net/Images/front-end.png"
+            };
+            CardImage image3 = new CardImage()
+            {
+                Url = "http://smbibotapp20170804124326.azurewebsites.net/Images/app.png"
+            };
+            CardImage image4 = new CardImage()
+            {
+                Url = "http://smbibotapp20170804124326.azurewebsites.net/Images/moblie.png"
+            };
+            CardImage image5 = new CardImage()
+            {
+                Url = "http://smbibotapp20170804124326.azurewebsites.net/Images/cloud.png"
+            };
+
             CardAction Button1 = new CardAction()
             {
                 Value = "ok you are interested in fullstack",
@@ -1952,25 +2012,77 @@ namespace SmbiBotApp
                 Type = "postBack",
                 Title = "Cloud Developer",
             };
-            cardButtons.Add(Button1);
-            cardButtons.Add(Button2);
-            cardButtons.Add(Button3);
-            cardButtons.Add(Button4);
-            cardButtons.Add(Button5);
-            HeroCard jobCard = new HeroCard()
-            {
-                Buttons = cardButtons,
-            };
+            cardButtons1.Add(Button1);
+            cardButtons2.Add(Button2);
+            cardButtons3.Add(Button3);
+            cardButtons4.Add(Button4);
+            cardButtons5.Add(Button5);
+           
+            cardImages1.Add(image1);
+            cardImages2.Add(image2);
+            cardImages3.Add(image3);
+            cardImages4.Add(image4);
+            cardImages5.Add(image5);
 
-            Attachment jobAttachment = jobCard.ToAttachment();
-            reply.Attachments.Add(jobAttachment);
+            HeroCard jobCard1 = new HeroCard()
+            {
+                Buttons = cardButtons1,
+                Images = cardImages1,
+
+            };
+            HeroCard jobCard2 = new HeroCard()
+            {
+                Buttons = cardButtons2,
+                Images = cardImages2
+            };
+            HeroCard jobCard3 = new HeroCard()
+            {
+                Buttons = cardButtons3,
+                Images = cardImages3
+            };
+            HeroCard jobCard4 = new HeroCard()
+            {
+                Buttons = cardButtons4,
+                Images = cardImages4
+            };
+            HeroCard jobCard5 = new HeroCard()
+            {
+                Buttons = cardButtons5,
+                Images = cardImages5
+            };
+            Attachment jobAttachment1 = jobCard1.ToAttachment();
+            Attachment jobAttachment2 = jobCard2.ToAttachment();
+            Attachment jobAttachment3 = jobCard3.ToAttachment();
+            Attachment jobAttachment4 = jobCard4.ToAttachment();
+            Attachment jobAttachment5 = jobCard5.ToAttachment();
+            reply.Attachments.Add(jobAttachment1);
+            reply.Attachments.Add(jobAttachment2);
+            reply.Attachments.Add(jobAttachment3);
+            reply.Attachments.Add(jobAttachment4);
+            reply.Attachments.Add(jobAttachment5);
             reply.AttachmentLayout = AttachmentLayoutTypes.Carousel;
+
         }
 
         private void select_marketing(Activity reply)
         {
+
             reply.Attachments = new List<Attachment>();
-            List<CardAction> cardButtons = new List<CardAction>();
+            List<CardAction> cardButtons1 = new List<CardAction>();
+            List<CardAction> cardButtons2 = new List<CardAction>();
+            List<CardImage> cardImages1 = new List<CardImage>();
+            List<CardImage> cardImages2 = new List<CardImage>();
+
+            CardImage image1 = new CardImage()
+            {
+                Url = "http://smbibotapp20170804124326.azurewebsites.net/Images/dig-mar.png"
+            };
+            CardImage image2 = new CardImage()
+            {
+                Url = "http://smbibotapp20170804124326.azurewebsites.net/Images/sal-mar.png"
+
+            };
+
             CardAction Button1 = new CardAction()
             {
                 Value = "ok you are interested in digital",
@@ -1984,16 +2096,27 @@ namespace SmbiBotApp
                 Title = "Sales Representative",
             };
 
-            cardButtons.Add(Button1);
-            cardButtons.Add(Button2);
+            cardButtons1.Add(Button1);
+            cardButtons2.Add(Button2);
+            cardImages1.Add(image1);
+            cardImages2.Add(image2);
 
-            HeroCard jobCard = new HeroCard()
+            HeroCard jobCard1 = new HeroCard()
             {
-                Buttons = cardButtons,
+                Buttons = cardButtons1,
+                Images = cardImages1,
+
+            };
+            HeroCard jobCard2 = new HeroCard()
+            {
+                Buttons = cardButtons2,
+                Images = cardImages2
             };
 
-            Attachment jobAttachment = jobCard.ToAttachment();
-            reply.Attachments.Add(jobAttachment);
+            Attachment jobAttachment1 = jobCard1.ToAttachment();
+            Attachment jobAttachment2 = jobCard2.ToAttachment();
+            reply.Attachments.Add(jobAttachment1);
+            reply.Attachments.Add(jobAttachment2);
             reply.AttachmentLayout = AttachmentLayoutTypes.Carousel;
         }
 
