@@ -118,7 +118,7 @@ namespace SmbiBotApp
         public static string acctoken = null;//4
         //public static readonly Uri FacebookOauthCallback = new Uri("http://smbibotapp20170804124326.azurewebsites.net/api/OAuthCallback");//3//5
         //public static readonly Uri FacebookOauthCallback = new Uri("http://localhost:3975/api/OAuthCallback");//3//5
-        public List<string> col = new List<string>();
+        public static List<string> col = new List<string>();
         public static List<string> data = new List<string>();
         public static List<string> avoid = new List<string>();
         static string[] profile = new string[7];
@@ -394,16 +394,13 @@ namespace SmbiBotApp
             reply = activity.CreateReply();
             if (activity.Type == ActivityTypes.Message)
             {
-                    if (activity.Text == null)
-                    {
-                                              
-                        activity.Text = activity.GetChannelData<dynamic>()?.referral["ref"] ?? activity.Text;
-
-                    }
+                    //if (activity.Text == null)
+                    //{                                          
+                    //    activity.Text = activity.GetChannelData<dynamic>()?.referral["ref"] ?? activity.Text;
+                    //}
                     if (activity.Text.Length <= 499)
                     {
                         
-
                         activity.Text =  activity.GetChannelData<dynamic>()?.message?.quick_reply?.payload ?? activity.Text;
                         var phrase = activity.Text;
                         var luisresp = await LuisService.ParseUserInput(phrase);
@@ -415,7 +412,6 @@ namespace SmbiBotApp
                         {
                             luisresp = await LuisService.ParseUserInput(phrase);
                         }
-
 
                     back:
 
@@ -650,67 +646,12 @@ namespace SmbiBotApp
                                                     await connector.Conversations.ReplyToActivityAsync(reply);
                                                     Thread.Sleep(500);
                                                     reply.Text = "";
-                                                    //   replymesge = col.ElementAt(0);
-                                                    //   continueornot(reply);
-                                                    RedirectController.cont = reply;
-
-                                                    var attachment = new
-                                                    {
-                                                        type = "template",
-                                                        payload = new
-                                                        {
-                                                            template_type = "button",
-                                                            text = "UserName now that I have a grasp of what your looking for lets play a word game to unlock your personality and get insights into companies that would be right for you",
-                                                            buttons = new[]
-                                                               {
-                                                                  new
-                                                                  {
-                                                                    type = "web_url",
-                                                                    url = "https://smbibotapp20170804124326.azurewebsites.net/Webviews/index.html",
-                                                                    title = "Personality Test",
-                                                                    webview_height_ratio = "tall",
-                                                                    messenger_extensions = true
-                                                                   }
-                                                                }
-                                                        }
-                                                    };
-                                                    //  var message = new 
-                                                    //  { 
-                                                    //   attachment = new
-                                                    //   {
-                                                    //      type = "template",
-                                                    //      payload = new
-                                                    //      {
-                                                    //          template_type = "generic",
-                                                    //          // text = "UserName now that I have a grasp of what your looking for lets play a word game to unlock your personality and get insights into companies that would be right for you",
-                                                    //          elements = new[]
-                                                    //              {
-                                                    //                new
-                                                    //                {
-                                                    //                       type = "web_url",
-                                                    //                       title = "Personality",
-                                                    //                       subtitle = "Test",
-                                                    //                       url = "https://smbibotapp20170804124326.azurewebsites.net/Webviews/index.html",
-                                                    //                       webview_height_ratio = "tall",
-                                                    //                       messenger_extensions = true
-
-                                                    //                 }
-                                                    //              }
-                                                    //      }
-                                                    //   }
-                                                    //};
-                                                    reply.ChannelData = JObject.FromObject(new
-                                                    {
-                                                        attachment
-
-                                                    });
+                                                    replymesge = col.ElementAt(0);
+                                                    continueornot(reply);
+                                                   // RedirectController.cont = reply;
+                                                                               
+                                                                                                    
                                                     
-                                                    await connector.Conversations.ReplyToActivityAsync(reply);
-                                                    //replymesge = "welcome back to the bot";
-                                                    await Conversation.SendAsync(reply, () => new RootDialog());
-                                                    //  reply.Text = col.ElementAt(0); 
-                                                    //  await connector.Conversations.ReplyToActivityAsync(reply);
-
 
 
 
@@ -744,7 +685,7 @@ namespace SmbiBotApp
                                                     replymesge = col.ElementAt(5);
                                                     break;
 
-                                                case "personality":
+                                                case "company":
                                                     reply.Text = col.ElementAt(10);
                                                     await connector.Conversations.ReplyToActivityAsync(reply);
                                                     replymesge = col.ElementAt(11);
@@ -777,10 +718,10 @@ namespace SmbiBotApp
                                                     replymesge = col.ElementAt(2);
                                                     count = 1;
                                                     break;
-                                                case "company":
-                                                    replymesge = col.ElementAt(13);
-                                                    selectCompany(reply);
-                                                    break;
+                                                //case "company":
+                                                //    replymesge = col.ElementAt(13);
+                                                //    selectCompany(reply);
+                                                //    break;
                                                                                                    
                                                     //// case "position":
                                                     //// replymesge = col.ElementAt(5); 
@@ -903,7 +844,7 @@ namespace SmbiBotApp
                                                 case "data":
                                                     reply.Text = display_user_info(1);
                                                     await connector.Conversations.ReplyToActivityAsync(reply);//new
-                                                                                                              // Thread.Sleep(2000);
+                                                    // Thread.Sleep(2000);
                                                     replymesge = col.ElementAt(91);
                                                     commands(reply);
                                                     break;
@@ -1015,6 +956,7 @@ namespace SmbiBotApp
                                             case 4:
                                                 check_entity(symb, luisresp);
                                                 // replymesge = correctSequence(str.intent, replymesge, 8);
+                                                RedirectController.cont = reply;            
                                                 personality_view(reply);
                                                 break;
 
@@ -4091,13 +4033,12 @@ namespace SmbiBotApp
                 payload = new
                 {
                     template_type = "button",
-                    text = data[0].Split().First() +" now that I have a grasp of what your looking for lets play a word game to unlock your personality and get insights into companies that would be right for you",
+                    text = data[1].Split().First() +" now that I have a grasp of what your looking for lets play a word game to unlock your personality and get insights into companies that would be right for you",
                     buttons = new[]
                     {
                       new
                       {
-                        type = "postback",
-                        value="webviewclose",
+                        type = "web_url",
                         url = "https://smbibotapp20170804124326.azurewebsites.net/Webviews/index.html",
                         title = "Personality Test",
                         webview_height_ratio = "tall",
@@ -4106,6 +4047,7 @@ namespace SmbiBotApp
                     }
                 }
             };
+
             reply.ChannelData = JObject.FromObject(new
             {
                 attachment
