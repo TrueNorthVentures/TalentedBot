@@ -23,11 +23,16 @@ namespace SmbiBotApp.Controllers
         [Route("api/Callback")]
         public  Task<HttpResponseMessage> Callback([FromUri] string display)
         {
-               var uri = GetUri("https://www.messenger.com/closeWindow",
-               Tuple.Create("image_url","http://smbibotapp20170804124326.azurewebsites.net/Images/abstract-logo.png"),
-               Tuple.Create("display_text","welcome back to the bot"));
-              
-            HttpContext.Current.Response.Redirect(uri.ToString());
+            //var uri = GetUri("https://www.facebook.com/messages/closeWindow",
+            //  Tuple.Create("image_url", "http://smbibotapp20170804124326.azurewebsites.net/Images/abstract-logo.png"),
+            //  Tuple.Create("display_text", "welcome back to the bot"));
+
+
+            //var uri = GetUri("https://www.messenger.com/closeWindow",
+            //      Tuple.Create("image_url", "http://smbibotapp20170804124326.azurewebsites.net/Images/abstract-logo.png"),
+            //      Tuple.Create("display_text", "welcome back to the bot"));
+          
+            // HttpContext.Current.Response.Redirect(uri.ToString());
             ConnectorClient connector = new ConnectorClient(new Uri("https://facebook.botframework.com"));
             cont.Text = MessagesController.col.ElementAt(9); 
             cont.ChannelData = null;

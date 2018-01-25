@@ -13,5 +13,10 @@ namespace SmbiBotApp
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);         
         }
+        protected void Application_BeginRequest()
+        {
+            Response.AddHeader("X-Frame-Options", "https://www.messenger.com/");
+            Response.AddHeader("X-Frame-Options", "https://www.facebook.com/");
+        }
     }
 }
