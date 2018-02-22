@@ -1,0 +1,94 @@
+{
+"_id" : "4598345349879345",
+basic:
+{
+  "name"        : "usama iqbal",
+  "city"        : "rawalpindi",
+  "birthday"    : "27/4/1992",
+  "email"       : "usama@truenorth.com.pk", 
+  "personailty" : "7",
+  "status"      : "2"
+},
+
+educational:[
+
+{
+  "qualification" : "masters",
+  "passingyear"   : "2016",
+  "degree"        : "computer science",   
+  "university"    : "comsats" 
+
+},
+{
+ 
+  "qualification" : "bachelor",
+  "passingyear"   : "2014",
+  "degree"        : "computer science",   
+  "university"    : "comsats" 
+}
+
+],
+
+professional:[
+
+{
+  "designation" : "junior software dveloper",
+  "experience"  : "3 years",
+  "company"     : "true north",
+  "achievement" : "" 
+},
+{
+  "designation" : "junior software dveloper",
+  "experience"  : "3 years",
+  "company"     : "true north",
+  "achievement" : "" 
+}
+
+],
+
+project:[
+
+{
+  "title"          : "solar solution management system",
+  "description"    : "it automates office work",
+  "technologies"   : ".net,sql server",
+  "completiontime" : "1 year"
+},
+{ 
+  "title"          : "solar solution management system",
+  "description"    : "it automates office work",
+  "technologies"   : ".net,sql server",
+  "completion_time" : "1 year"
+}
+
+],
+
+test:[
+{
+  "occupation" : "Design",
+  "position"   : "UX/UI",
+  "employment" : "fulltime",
+  "company"    : "truenorth",
+  "module_no"  : "1",
+  "module_name": "Logo Design",
+  "tech"       : "",
+  "score"      : "7"
+  "date"       : "3/13/2017"
+},
+{ 
+  "occupation" : "Design",
+  "position"   : "Graphic",
+  "employment" : "fulltime",
+  "company"    : "truenorth",
+  "module_no"  : "1",
+  "module_name": "Logo Design",
+  "tech"       : "",
+  "score"      : "8"
+  "date"       : "1/13/2017" 
+}
+
+];
+}
+
+
+

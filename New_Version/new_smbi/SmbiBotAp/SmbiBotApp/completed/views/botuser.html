@@ -1,0 +1,15 @@
+<html>
+<body>
+<form class="form-auth" ng-submit="botdata()">
+	<h2>Log In</h2>
+	<p class="text-warning">{{error_message}}</p>
+	<input type="text" ng-model="userName.firstName" placeholder="firstname" class="form-control"><br>
+	<input type="text" ng-model="userName.lastName" placeholder="lastname" class="form-control"><br>
+	<input type="submit" value="Search" class="btn btn-primary" />
+
+</form>
+<div ng-repeat="d in dis">
+    {{d.basic.last_name}}
+</div>
+</body>
+</html>

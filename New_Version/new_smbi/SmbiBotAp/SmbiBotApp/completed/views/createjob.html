@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Create Jobs</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="stylesheets/style.css">
+	</head>
+<body>
+
+<form class="form-auth" ng-submit="createjob()">     <!-- // version 1.1 -->
+  
+    <div>
+<!--    <label class="col-md-3">Action<span style="color: #b94a48">*</span></b></label>-->
+    <div class="col-lg-9 col-md-7">
+        <!--
+         <div ng-repeat="tra in tracks">  
+           <div ng-repeat="tr in tra.TestStructure.Courses">  
+              <div ng-repeat="t in tr.Tracks">  
+                   {{t.track_name}}
+              </div>
+            </div>    
+         </div> t.track_name for t in tra.Tracks<ng-options>tra for tra in tracks.TestStructure.Courses,
+tra.track_name as tra.Tracks for tra in tracks.TestStructure.Courses
+--> 
+               <!--<div ng-repeat="people in People">-->
+<!--
+      <label>{{people.firstName}}</label>
+    
+    
+ </div>
+            
+-->
+        
+    <div class="form-group"> 
+<!--
+     <select  style="width: 100%;">
+
+    <option ng-options="tra for tra in tracks.TestStructure.Courses">
+    <option ng-options="t.track_name for t in tra.Tracks"></option>
+
+    <option ng-repeat-end ng-repeat="t in tr.Tracks" ng-bind="t.track_name"></option>
+    </optgroup>
+         
+    </select>
+-->
+  
+        
+    <select  ng-model="jobSchema.position" ng-selected="displaymodules()" style="width: 100%;">  <!-- // version 1.1 -->
+        <option value="" disabled selected>Position</option>
+    <optgroup ng-repeat="tra in tracks">
+        <option disabled ng-repeat-start="tr in tra.TestStructure.Courses" ng-bind="tr.course_name">
+     <option ng-options="t.track_name for t in tr.Tracks" value="" disabled selected>Select Type</option>
+     <option ng-repeat-end ng-repeat="t in tr.Tracks" ng-bind="t.track_name"
+             value="{{t.track_name}}"></option>
+    </optgroup>
+         
+    </select>
+            
+<!--
+            <select ng-model="selectedTrack" ng-options="tra for tra in test" style="width: 100%;">
+         ng-model="jobSchema.trackName"            <option value="" disabled selected>Position</option>
+             </select>            
+-->
+        </div>
+        <div class="form-group">
+            <select ng-model="jobSchema.valid_date" ng-options="obj.name as obj.name for obj in ordertypeList"
+                style="width: 100%;">
+                <option value="" disabled selected>Valid till</option>
+            </select>
+        </div>
+        <div class="form-group">
+           <input ng-model="jobSchema.location" type="text" placeholder="Location">
+        </div>
+        <div class="form-group">
+           <input ng-model="jobSchema.salary_offered" type="text" placeholder="Salary Offered">
+        </div>
+        <div class="form-group">
+            <select ng-model="jobSchema.contract_type" ng-options="obj.name as obj.name for obj in ordertypeList"
+                style="width: 100%;">
+                <option value="" disabled selected>Contract Type</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select ng-model="jobSchema.experience_type" ng-options="obj.name as obj.name for obj in ordertypeList"
+                style="width: 100%;">
+                <option value="" disabled selected>Experience Type</option>
+            </select>
+        </div>
+         <div class="form-group" style="width: 100%;">
+           <input ng-model="jobSchema.role_description" type="text" placeholder="Role Description">
+        </div>
+        <div ng-repeat="tra in tracks" ng-show="selected">  
+           <div ng-repeat="tr in tra.TestStructure.Courses">  
+              <div ng-repeat="t in tr.Tracks | filter:selected">
+                  <div ng-repeat="c in t.Modules track by $index"> 
+                       {{c.module_name}}
+<!--                         <div ng-show="getcounter(c.module_name,$index)">-->
+                        <input ng-model="modules[$index]" type="text" style="width: 100%;"> 
+                    
+<!--
+                    ng-show="getcounter(c.module_name,value)|filter:selected"
+                    <div ng-repeat="items in c">
+                      <input ng-model="jobSchema.Modules.weightage" type="text" 
+                             style="width: 15%; margin-left: 115%; margin-top: -12%;">   
+                    </div>            
+-->
+
+                  </div>                   
+              </div>              
+            </div>
+        </div>
+<!--
+        <div ng-repeat="m in modules">
+            {{m}}
+        </div>
+-->
+        
+<!--      {{counter}}  -->
+<!--
+        <div ng-repeat="count in counter" ng-show="selected">
+            {{count.value}}
+             <input ng-model="jobSchema.Modules.weightage" type="text" 
+                    style="width: 25%;margin-left: 150%;">   
+        </div>
+-->
+<!--         {{jobSchema.Modules.weightage}}-->
+       
+        <div>
+           
+        <input class="form-group" type="submit" value="Submit">
+        </div>
+        {{jobSchema.trackName}}
+<!--        {{t.track_name}}-->
+<!--
+        <div ng-repeat="tra in tracks">
+        {{tra}}
+        </div>
+-->
+<!--
+        
+        <div ng-repeat="tra in tracks">  
+             <div ng-repeat="tr in tra.TestStructure.Courses">  
+                  <div ng-repeat="t in tr.Tracks">  
+                    {{t.track_name}}
+                  </div>
+             </div>    
+        </div>
+-->
+<!--
+        
+        <div ng-repeat="tra in tracks">  
+            {{tra.TestStructure.Courses}}
+            {{tra.TestStructure.Courses[0].Tracks}}
+             <div ng-repeat="tr in tra.TestStructure.Courses">  
+                {{t.track_name}}
+                  <div ng-repeat="t in tr.Tracks">  
+                  {{t.track_name}}
+            </div>
+            </div>    
+        </div>
+-->
+        
+<!--
+        <ul ng-repeat="tra in tracks.Courses">  
+            {{tra.TestStructure.Courses[0].Tracks}}
+             <li ng-repeat="t in tra.Tracks">  
+                {{t.track_name}}
+            </li>    
+        </ul>
+        
+-->
+    </div>
+  </div>
+</form> 
+</body>
+</html>

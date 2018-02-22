@@ -9,12 +9,16 @@
 </head>
 <body>
     <h1>welcome to the webview</h1>
-    <h2>welcome 19</h2>
+    <h2>welcome 21</h2>
     <button style="width:200px;height:100px;" id="success">Click me</button>
 
     <p id="demo"></p>
 
-
+    <div class="fb-like"
+         data-share="true"
+         data-width="450"
+         data-show-faces="true">
+    </div>
 
     <!--<script src="//connect.facebook.com/en_US/messenger.Extensions.js"></script>-->
     <script type="text/javascript">
@@ -30,46 +34,65 @@
             var text = "welcome back to the bot";
             //var text = window.name;
             document.getElementById("success").onclick = function () {
-                window.MessengerExtensions.requestCloseBrowser();
-             
-                    window.location.href = "https://ac5d2ea2.ngrok.io/api/Callback?display=" + encodeURI(text);
-                 
+
+                 MessengerExtensions.requestCloseBrowser(function success() {
+
+                        //window.location.href = "https://ebae12eb.ngrok.io/api/Callback?display=" + encodeURI(text);
+                         window.location.href = "https://smbibotapp20170804124326.azurewebsites.net/api/Callback?display=" + encodeURI(text);
+
+         
+                      }, function error(err) {
+
+                      });
+
+
+
+
+
+
+
+                //window.MessengerExtensions.requestCloseBrowser();
+
+                //window.location.href = "https://ebae12eb.ngrok.io/api/Callback?display=" + encodeURI(text);
+
             }
         };
-        //window.extAsyncInit = function () {
-        //    // the Messenger Extensions JS SDK is done loading 
-        //     document.getElementById("success").onclick = function () {
-        //         // window.location.href = "https://smbibotapp20170804124326.azurewebsites.net/api/Callback?display=" + encodeURI(text);
-        //         //window.location.href = "https://ac5d2ea2.ngrok.io/api/Callback?display=" + encodeURI(text);
-        //        // window.location.href = "http://ac5d2ea2.ngrok.io/api/Callback?display=" + encodeURI(text);
-        //         MessengerExtensions.requestCloseBrowser();
-        //         //MessengerExtensions.requestCloseBrowser(function success() {
-                   
-        //          window.location.href = "http://ac5d2ea2.ngrok.io/api/Callback?display=" + encodeURI(text);
-
-        //        //  window.location.href = "https://ac5d2ea2.ngrok.io/api/Callback?display=" + encodeURI(text);
-
-        //         //    // window.location.href = "https://smbibotapp20170804124326.azurewebsites.net/api/Callback?display=" + encodeURI(text);
-
-        //         // }, function error(err) {
-
-        //         // });    
 
 
+            //window.extAsyncInit = function () {
+            //    // the Messenger Extensions JS SDK is done loading
+            //     document.getElementById("success").onclick = function () {
+            //         // window.location.href = "https://smbibotapp20170804124326.azurewebsites.net/api/Callback?display=" + encodeURI(text);
+            //         //window.location.href = "https://ac5d2ea2.ngrok.io/api/Callback?display=" + encodeURI(text);
+            //        // window.location.href = "http://ac5d2ea2.ngrok.io/api/Callback?display=" + encodeURI(text);
+            //         MessengerExtensions.requestCloseBrowser();
+            //         //MessengerExtensions.requestCloseBrowser(function success() {
 
-        //     }
+            //          window.location.href = "http://ac5d2ea2.ngrok.io/api/Callback?display=" + encodeURI(text);
+
+            //        //  window.location.href = "https://ac5d2ea2.ngrok.io/api/Callback?display=" + encodeURI(text);
+
+            //         //    // window.location.href = "https://smbibotapp20170804124326.azurewebsites.net/api/Callback?display=" + encodeURI(text);
+
+            //         // }, function error(err) {
+
+            //         // });
 
 
-                
-        //};
-     
-        //var text = "welcome back to the bot";
-        //var url = "http://smbibotapp20170804124326.azurewebsites.net/Images/abstract-logo.png";
-        //document.getElementById("success").onclick = function () {
-            
-        //window.location.href = "https://smbibotapp20170804124326.azurewebsites.net/api/Callback?display=" + encodeURI(text);
-        //   // window.location.href = "https://99f1c304.ngrok.io/api/Callback?display=" + encodeURI(text);
-        //}
+
+            //     }
+
+
+
+            //};
+
+            //var text = "welcome back to the bot";
+            //var url = "http://smbibotapp20170804124326.azurewebsites.net/Images/abstract-logo.png";
+            //document.getElementById("success").onclick = function () {
+
+            //window.location.href = "https://smbibotapp20170804124326.azurewebsites.net/api/Callback?display=" + encodeURI(text);
+            //   // window.location.href = "https://99f1c304.ngrok.io/api/Callback?display=" + encodeURI(text);
+            //}
 
     </script>
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="MeanStack/Angular/info.js"></script>
+
+<body ng-app="info">
+
+<div ng-controller="disp">
+    <form ng-Submit="show()">
+        <p>Input something in the input box:</p>
+        <p>First Name: <input type="text"   ng-model="name"></p>
+        <p>Last Name:  <input type="text"   ng-model="name"></p>
+        <p>Last Name:  <input type="submit" ng-model="name" value="search"></p>
+        <p>{{name}}</p>
+    </form>
+</div>
+    
+<div ng-controller="disp">
+ 
+<p>Input something in the input box:</p>
+<p>Name: <input type="text" ng-model="name"></p>
+<p>{{name}}</p>
+
+</div>
+
+</body>
+</html>

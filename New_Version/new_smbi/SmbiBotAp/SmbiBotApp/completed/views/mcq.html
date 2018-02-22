@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <form class="form-auth" ng-submit="mcqdata()">
+
+        <p>You find it difficult to introduce yourself to other people.</p>
+        <input type="radio" ng-model="mutipleChoices.1" value="99.99"> Strongly Agree
+        <input type="radio" ng-model="mutipleChoices.1" value="66.66">  Agree
+        <input type="radio" ng-model="mutipleChoices.1" value="33.33">  Weakly Agree
+        <input type="radio" ng-model="mutipleChoices.1" value="-33.33">  Weakly Disagree
+        <input type="radio" ng-model="mutipleChoices.1" value="-66.66">  Disagree
+        <input type="radio" ng-model="mutipleChoices.1" value="-99.99"> Strongly Disagree<br><br>
+
+        <p>You often get so lost in thoughts that you ignore or forget your surroundings.</p>
+        <input type="radio" ng-model="mutipleChoices.2" value="99.99"> Strongly Agree
+        <input type="radio" ng-model="mutipleChoices.2" value="66.66">  Agree
+        <input type="radio" ng-model="mutipleChoices.2" value="33.33">  Weakly Agree
+        <input type="radio" ng-model="mutipleChoices.2" value="-33.33">  Weakly Disagree
+        <input type="radio" ng-model="mutipleChoices.2" value="-66.66">  Disagree
+        <input type="radio" ng-model="mutipleChoices.2" value="-99.99"> Strongly Disagree<br><br>
+
+        <p>You try to respond to your e-mails as soon as possible and cannot stand a messy inbox.</p>
+        <input type="radio" ng-model="mutipleChoices.3" value="99.99"> Strongly Agree
+        <input type="radio" ng-model="mutipleChoices.3" value="66.66">  Agree
+        <input type="radio" ng-model="mutipleChoices.3" value="33.33">  Weakly Agree
+        <input type="radio" ng-model="mutipleChoices.3" value="-33.33">  Weakly Disagree
+        <input type="radio" ng-model="mutipleChoices.3" value="-66.66">  Disagree
+        <input type="radio" ng-model="mutipleChoices.3" value="-99.99"> Strongly Disagree<br><br>
+
+        <p>You find it easy to stay relaxed even when there is some pressure.</p>
+        <input type="radio" ng-model="mutipleChoices.4" value="99.99"> Strongly Agree
+        <input type="radio" ng-model="mutipleChoices.4" value="66.66">  Agree
+        <input type="radio" ng-model="mutipleChoices.4" value="33.33">  Weakly Agree
+        <input type="radio" ng-model="mutipleChoices.4" value="-33.33">  Weakly Disagree
+        <input type="radio" ng-model="mutipleChoices.4" value="-66.66">  Disagree
+        <input type="radio" ng-model="mutipleChoices.4" value="-99.99"> Strongly Disagree<br><br>
+
+        <p>You do not usually initiate conversations.</p>
+        <input type="radio" ng-model="mutipleChoices.5" value="99.99"> Strongly Agree
+        <input type="radio" ng-model="mutipleChoices.5" value="66.66">  Agree
+        <input type="radio" ng-model="mutipleChoices.5" value="33.33">  Weakly Agree
+        <input type="radio" ng-model="mutipleChoices.5" value="-33.33">  Weakly Disagree
+        <input type="radio" ng-model="mutipleChoices.5" value="-66.66">  Disagree
+        <input type="radio" ng-model="mutipleChoices.5" value="-99.99"> Strongly Disagree<br><br>
+
+        <p>You rarely do something just out of sheer curiosity.</p>
+        <input type="radio" ng-model="mutipleChoices.6" value="99.99"> Strongly Agree
+        <input type="radio" ng-model="mutipleChoices.6" value="66.66">  Agree
+        <input type="radio" ng-model="mutipleChoices.6" value="33.33">  Weakly Agree
+        <input type="radio" ng-model="mutipleChoices.6" value="-33.33">  Weakly Disagree
+        <input type="radio" ng-model="mutipleChoices.6" value="-66.66">  Disagree
+        <input type="radio" ng-model="mutipleChoices.6" value="-99.99"> Strongly Disagree<br><br>
+
+        <p>You feel superior to other people.</p>
+        <input type="radio" ng-model="mutipleChoices.7" value="99.99"> Strongly Agree
+        <input type="radio" ng-model="mutipleChoices.7" value="66.66">  Agree
+        <input type="radio" ng-model="mutipleChoices.7" value="33.33">  Weakly Agree
+        <input type="radio" ng-model="mutipleChoices.7" value="-33.33">  Weakly Disagree
+        <input type="radio" ng-model="mutipleChoices.7" value="-66.66">  Disagree
+        <input type="radio" ng-model="mutipleChoices.7" value="-99.99"> Strongly Disagree<br><br>
+        <input type="submit" value="Results">
+    </form>
+    <button style="width:90px;height:30px;" id="success">Back</button>
+
+    <p ng-bind-html="display"></p>
+
+    <script type="text/javascript">
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.com/en_US/messenger.Extensions.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'Messenger'));
+
+        window.extAsyncInit = function () {
+            var text = "welcome back to the bot";
+            document.getElementById("success").onclick = function () {
+
+                MessengerExtensions.requestCloseBrowser(function success() {
+
+                    //window.location.href = "https://ebae12eb.ngrok.io/api/Callback?display=" + encodeURI(text);
+                    window.location.href = "https://smbibotapp20170804124326.azurewebsites.net/api/Callback?display=" + encodeURI(text);
+
+
+                }, function error(err) {
+
+                });
+
+            }
+        };
+
+
+    </script>
+
+
+
+
+</body>
+</html>

@@ -646,34 +646,66 @@ namespace SmbiBotApp
                                                     await connector.Conversations.ReplyToActivityAsync(reply);
                                                     Thread.Sleep(500);
                                                     //reply.Text = "";
-                                                   // replymesge = col.ElementAt(0);
-                                                    //continueornot(reply);
-                                                    RedirectController.cont = reply;
-                                                    var attachment = new
-                                                    {
-                                                        type = "template",
-                                                        payload = new
-                                                        {
-                                                            template_type = "button",
-                                                            text ="Username now that I have a grasp of what your looking for lets play a word game to unlock your personality and get insights into companies that would be right for you",
-                                                            buttons = new[]
-                                                            {
-                                                              new
-                                                              {
-                                                                 type = "web_url",
-                                                                 url = "https://smbibotapp20170804124326.azurewebsites.net/Webviews/index.html",
-                                                                 title = "Personality Test",
-                                                                 webview_height_ratio = "tall",
-                                                                 messenger_extensions = true
-                                                              }
-                                                            }
-                                                        }
-                                                    };
+                                                    replymesge = col.ElementAt(0);
+                                                    continueornot(reply);
+                                                    //RedirectController.cont = reply;
+                                                    //var attachment = new
+                                                    //{
+                                                    //    type = "template",
+                                                    //    payload = new
+                                                    //    {
+                                                    //        template_type = "generic",
+                                                    //       // text = "Username now that I have a grasp of what your looking for lets play a word game to unlock your personality and get insights into companies that would be right for you",
+                                                    //        elements = new[]
+                                                    //        {
+                                                    //          new
+                                                    //          {
+                                                    //            // type = "web_url",
+                                                    //            // url = "https://smbibotapp20170804124326.azurewebsites.net/Webviews/index.html",
+                                                    //             title = "Personality Test",
+                                                    //            // webview_height_ratio = "tall",
+                                                    //            // messenger_extensions = true,
+                                                    //              // fallback_url = "https://smbibotapp20170804124326.azurewebsites.net/api/Callback"
+                                                    //             default_action = new
+                                                    //             {
+                                                    //                   type = "web_url",
+                                                    //                   url = "https://smbibotapp20170804124326.azurewebsites.net/Webviews/index.html",
+                                                    //                   webview_height_ratio = "tall",
+                                                    //                   messenger_extensions = true,
+                                                    //                   fallback_url = "https://smbibotapp20170804124326.azurewebsites.net/api/Callback"
+                                                    //             }
+                                                               
+                                                    //          }
+                                                    //        }
+                                                    //    }
+                                                    //};
 
-                                                    reply.ChannelData = JObject.FromObject(new
-                                                    {
-                                                        attachment
-                                                    });
+                                                    //var attachment = new
+                                                    //{
+                                                    //    type = "template",
+                                                    //    payload = new
+                                                    //    {
+                                                    //        template_type = "button",
+                                                    //        text = "Username now that I have a grasp of what your looking for lets play a word game to unlock your personality and get insights into companies that would be right for you",
+                                                    //        buttons = new[]
+                                                    //        {
+                                                    //          new
+                                                    //          {
+                                                    //             type = "web_url",
+                                                    //             url = "https://smbibotapp20170804124326.azurewebsites.net/Webviews/index.html",
+                                                    //             title = "Personality Test",
+                                                    //             webview_height_ratio = "tall",
+                                                    //             messenger_extensions = true,
+                                                    //             fallback_url = "https://smbibotapp20170804124326.azurewebsites.net/api/Callback"
+                                                    //          }
+                                                    //        }
+                                                    //    }
+                                                    //};
+
+                                                    //reply.ChannelData = JObject.FromObject(new
+                                                    //{
+                                                    //    attachment
+                                                    //});
 
 
 
@@ -4174,6 +4206,7 @@ namespace SmbiBotApp
 
         private void personality_view(Activity reply)
         {
+            
             var attachment = new
             {
                 type = "template",
@@ -4186,10 +4219,11 @@ namespace SmbiBotApp
                       new
                       {
                         type = "web_url",
-                        url = "https://smbibotapp20170804124326.azurewebsites.net/Webviews/index.html",
+                        url = "https://smbibotapp20170804124326.azurewebsites.net/completed/views/mcq.html",
                         title = "Personality Test",
                         webview_height_ratio = "tall",
-                        messenger_extensions = true
+                        messenger_extensions = true,
+                        // fallback_url = "https://smbibotapp20170804124326.azurewebsites.net/api/Callback"
                       }
                     }
                 }
